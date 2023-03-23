@@ -18,7 +18,7 @@
 <!-- <h1 class="text-xl">Prayer Time on {data.date_str}</h1> -->
 
 <div class="card card-bordered bg-primary text-3xl">
-  <!-- <h1>{$city.name}</h1> -->
+  <h1>{$city.name}</h1>
   <div class="card-body ">
     <div class="card-title text-gray-100">
       Prayer Time on {$currentCitySchedule.date_str}
