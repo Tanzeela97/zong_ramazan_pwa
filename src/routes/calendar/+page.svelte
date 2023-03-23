@@ -7,7 +7,8 @@
   $: isRamadan;
 </script>
 
-<h1>Calendar</h1>
+<hr />
+<!-- <h1>Calendar</h1> -->
 
 <div class="flex items-center text-3xl">
   <div class="card card-bordered bg-primary">

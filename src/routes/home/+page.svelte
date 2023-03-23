@@ -1,6 +1,7 @@
 <script>
   import PrayerTime from "../../components/PrayerTime/page.svelte";
   export let data;
+  // console.log("--------------data", data);
   const { prayerTime } = data;
   console.log("Home:", prayerTime);
 </script>

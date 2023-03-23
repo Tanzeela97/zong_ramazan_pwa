@@ -5,8 +5,9 @@
   const { ayats } = data;
 </script>
 
-<MenuBar />
-
+<div class="container">
+  <MenuBar />
+</div>
 <div class="container justify-items-center mx-10 my-2">
   <ul>
     {#each ayats as ayat}

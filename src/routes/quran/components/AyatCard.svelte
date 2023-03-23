@@ -2,7 +2,7 @@
   export let data: any[];
 </script>
 
-<div class="card card-bordered bg-green-100 border-gray-500">
+<div class="card-bordered bg-green-100 border-gray-500">
   <div class="card-body text-center">
     {#each data as ayat}
       {#if ayat.lang == "AR"}

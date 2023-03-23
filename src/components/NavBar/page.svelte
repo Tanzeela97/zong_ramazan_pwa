@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Fa from "svelte-fa";
   import {
     faBell,
@@ -10,10 +10,27 @@
   import { notification, city, cities } from "../../stores/store";
   import { CITIES_LIST } from "../../data/constants";
 
+  import { fetchCityPrayerTime } from "../../helpers/fetchCityPrayerTime";
+
   function handleNotificationClick() {
     console.log("Button clicked!");
     notification.set(!$notification);
   }
+
+  const handleClick = (selectedCity: any) => {
+    city.set({
+      name: selectedCity.name,
+      key: selectedCity.name,
+      geoloc: selectedCity.location.coordinates,
+    });
+
+    let new_city_data = fetchCityPrayerTime(
+      $city.name,
+      $city.geoloc[0],
+      $city.geoloc[1]
+    );
+    // console.log("-----------------------new city data", new_city_data);
+  };
 </script>
 
 <div class="navbar bg-secondary w-fit min-w-full">
@@ -45,7 +62,12 @@
 
         <ul class="p-2 bg-base-100">
           {#each $cities as cityItem}
-            <li><a href={null}>{cityItem.name}</a></li>
+            <li
+              on:click={handleClick(cityItem)}
+              class="cursor-pointer hover:bg-green-300"
+            >
+              <a href={null}>{cityItem.name}</a>
+            </li>
           {/each}
         </ul>
       </li>
