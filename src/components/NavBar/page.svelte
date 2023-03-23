@@ -6,9 +6,9 @@
     faHome,
     faArrowDown,
   } from "@fortawesome/free-solid-svg-icons";
-  import { notification } from "../../stores/store";
+
+  import { notification, city, cities } from "../../stores/store";
   import { CITIES_LIST } from "../../data/constants";
-  import { city } from "../../stores/store";
 
   function handleNotificationClick() {
     console.log("Button clicked!");
@@ -38,14 +38,14 @@
           {/if}
         </button>
       </li>
-      <li tabindex="0">
+      <li>
         <button class="btn btn-outline">
           {$city?.name || "City"}<Fa icon={faArrowDown} />
         </button>
 
         <ul class="p-2 bg-base-100">
-          {#each CITIES_LIST as cityItem}
-            <li><a>{cityItem.name}</a></li>
+          {#each $cities as cityItem}
+            <li><a href={null}>{cityItem.name}</a></li>
           {/each}
         </ul>
       </li>

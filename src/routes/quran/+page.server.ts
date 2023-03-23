@@ -1,4 +1,4 @@
-export const load = async () => {
+export const load = async ({ fetch }: { fetch: any; }) => {
     async function fetchData () {
         const surahNo = 1;
         const startAyat = 1;

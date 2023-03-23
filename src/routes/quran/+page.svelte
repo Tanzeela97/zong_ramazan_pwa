@@ -6,8 +6,9 @@
 </script>
 
 <MenuBar />
-<div class="flex">
-  <ul class="text-end">
+
+<div class="container justify-items-center mx-10 my-2">
+  <ul>
     {#each ayats as ayat}
       <li class="p-2">
         <AyatCard data={ayat} />

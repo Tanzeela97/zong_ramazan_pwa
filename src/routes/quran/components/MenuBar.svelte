@@ -7,7 +7,7 @@
   import { QURAN_JUZ_LIST, QURAN_SURAH_LIST } from "../../../data/quran";
 </script>
 
-<div class="navbar bg-base-100 w-full">
+<div class="navbar bg-base-100">
   <div class="flex-1 normal-case text-xl">Al Quran</div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
@@ -18,7 +18,7 @@
         </button>
         <ul class="p-2 bg-base-100">
           {#each QURAN_SURAH_LIST as surah}
-            <li><a>{surah.no} - {surah.name}</a></li>
+            <li><a href={null}>{surah.no} - {surah.name}</a></li>
           {/each}
         </ul>
       </li>
@@ -29,7 +29,7 @@
         </button>
         <ul class="p-2 bg-base-100">
           {#each QURAN_JUZ_LIST as juz}
-            <li dir="rtl"><a>{juz.no} - {juz.arabic}</a></li>
+            <li dir="rtl"><a href={null}> {juz.no} - {juz.arabic}</a></li>
           {/each}
         </ul>
       </li>

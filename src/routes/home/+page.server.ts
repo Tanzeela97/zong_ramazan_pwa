@@ -1,6 +1,6 @@
 // import { API_URL_PRAYER_TIME } from '$env/static/private';
 // import type { PageLoad } from './$types';
-export const load = async () => {
+export const load = async ({ fetch }: { fetch: any; }) => {
     async function fetchPrayerTime () {
         // console.log(API_URL_PRAYER_TIME);
         // const params = `lt=24.7&lg=67.0&m=KARACHI&a=HANAFI&tz=5`;
