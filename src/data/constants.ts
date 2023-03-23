@@ -10,7 +10,7 @@ export const CITIES_LIST = [
     { name: "Islamabad", key: "islamabad", geoloc: [33.68, 73.05] },
 ] satisfies TCityData[];
 
-export const HIJRI_MONTHS = [
+export const HIJRI_MONTHS_LIST = [
     "Muharram",
     "Safar",
     "Rabi-Ul_Awwal",

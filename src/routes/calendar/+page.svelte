@@ -1,6 +1,6 @@
 <script lang="ts">
   import { isRamadan } from "../../stores/store";
-  import { HIJRI_MONTHS, RAMADAN_MONTH_NO } from "../../data/constants";
+  import { RAMADAN_MONTH_NO, HIJRI_MONTHS_LIST } from "../../data/constants";
   export let data;
   const { prayerCalendar } = data;
 
@@ -10,13 +10,14 @@
 <h1>Calendar</h1>
 
 <div class="flex items-center text-3xl">
-  <div class="card card-bordered bg-pink-500">
+  <div class="card card-bordered bg-primary">
     <div class="card-body ">
       <table class="table table-compact text-center">
         <thead>
           <th>Date</th>
           <th
-            >{#if +prayerCalendar[0].hijri_date.hm == RAMADAN_MONTH_NO}Sehr{:else}Fajr{/if}</th
+            >{#if +prayerCalendar[0].hijri_date.hm == RAMADAN_MONTH_NO}Sehr<br
+              />End{:else}Fajr{/if}</th
           >
           <th>Sunrise</th>
           <th>Zuhr</th>
@@ -39,7 +40,7 @@
               <td>{item.isha}</td>
               <td
                 >{item.hijri_date.hd}
-                {HIJRI_MONTHS[+item.hijri_date.hm - 1]}</td
+                {HIJRI_MONTHS_LIST[+item.hijri_date.hm - 1]}</td
               >
             </tr>
           {/each}

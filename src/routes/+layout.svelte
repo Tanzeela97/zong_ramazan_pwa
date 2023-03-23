@@ -15,7 +15,9 @@
   }
 </script>
 
-<div class="container p-2 m-5">
+<div>
   <NavBar />
-  <slot />
+  <div class="container">
+    <slot />
+  </div>
 </div>
