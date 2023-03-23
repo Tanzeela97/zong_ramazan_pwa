@@ -1,19 +1,25 @@
 <script lang="ts">
-    import Fa from 'svelte-fa';
-    import { faBell, faBellSlash} from '@fortawesome/free-solid-svg-icons';
-    
-    import {Notification} from '../../stores/store'
-    
-    function handleClick() {
-        console.log("Button clicked!");
-        Notification.set(!$Notification)
-    }
+  import NotificationBar from "../../components/NotificationBar/page.svelte";
+  import { city } from "../../stores/store";
+  import { CITIES_LIST, type TCityData } from "../../data/constants";
+  import Fa from "svelte-fa";
+  import { faBell, faBellSlash } from "@fortawesome/free-solid-svg-icons";
+
+  import { notification } from "../../stores/store";
+
+  function handleClick() {
+    console.log("Button clicked!");
+    notification.set(!$notification);
+  }
 </script>
 
-
 <button class="badge badge-primary text-lg p-5" on:click={handleClick}
-  >Subscribe to notifications {'   '} {#if $Notification}
-  <Fa  icon={faBell}/>
-  {:else}
-  <Fa  icon={faBellSlash}/>
-  {/if}</button>
+  >Subscribe to notifications
+  <div class="px-2">
+    {#if $notification}
+      <Fa icon={faBell} />
+    {:else}
+      <Fa icon={faBellSlash} />
+    {/if}
+  </div>
+</button>

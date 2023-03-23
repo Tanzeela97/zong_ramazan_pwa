@@ -2,3 +2,6 @@ GET https://ap-1.ixon.cc/api/v3/prayertime/pt?lt=24.7&lg=67.0&m=KARACHI&a=HANAFI
 
 ###
 GET https://ap-1.ixon.cc/api/v3/prayertime/pt/range?lt=24.7&lg=67.0&m=KARACHI&a=HANAFI&tz=5&f=12hNS&std=2023-03-23&dys=30
+
+###
+https://ap-1.ixon.cc/api/v3/quran?surah=1&ayat=2
