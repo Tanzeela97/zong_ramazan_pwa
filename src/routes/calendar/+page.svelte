@@ -2,6 +2,7 @@
     import {IS_RAMADAN} from '../../stores/store'
     export let data
     const {prayerCalendar} = data
+    $: IS_RAMADAN
 </script>
 
 <h1>Calendar</h1>
@@ -12,11 +13,11 @@
 <table class="table table-compact text-center">
     <thead>
         <th>Date</th>
-        <th>{#if IS_RAMADAN}Sehr{:else}Fajr{/if}</th>
+        <th>{#if $IS_RAMADAN}Sehr{:else}Fajr{/if}</th>
         <th>Sunrise</th>
         <th>Zuhr</th>
         <th>Asar</th>
-        <th>{#if IS_RAMADAN}Iftar{:else}Maghrib{/if}</th>
+        <th>{#if $IS_RAMADAN}Iftar{:else}Maghrib{/if}</th>
         <th>Isha</th>
     </thead>
     <tbody>

@@ -15,7 +15,7 @@
                     </tr> -->
                     <tr>
                         <td>
-                            {#if IS_RAMADAN}
+                            {#if $IS_RAMADAN}
                                 Sehr
                             {:else}
                                 Fajr
@@ -34,7 +34,7 @@
                     </tr>
                     <tr>
                         <td>
-                            {#if IS_RAMADAN}
+                            {#if $IS_RAMADAN}
                                 Iftar
                             {:else}
                                 Maghrib
