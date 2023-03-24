@@ -2,12 +2,15 @@
   import { RAMADAN_MONTH_NO, HIJRI_MONTHS_LIST } from "../../data/constants";
   export let data: any;
 
-  import { city, currentCitySchedule } from "../../stores/store";
+  import { selectedCity, currentCityDailyPrayerTime } from "../../stores/store";
 
-  $currentCitySchedule = data;
-  console.log("------------current city", $city);
+  $currentCityDailyPrayerTime = data;
+  // console.log("------------current city", $selectedCity);
 
-  // console.log("----------currentCitySchedule", $currentCitySchedule);
+  console.log(
+    "----------currentCityDailyPrayerTime",
+    $currentCityDailyPrayerTime
+  );
   // console.log("------------cityPrayerSchedule", cityPrayerSchedule);
   // city.subscribe((data) => {
   //   cityPrayerSchedule = data;
@@ -17,14 +20,14 @@
 
 <!-- <h1 class="text-xl">Prayer Time on {data.date_str}</h1> -->
 
-<div class="card card-bordered bg-primary text-3xl">
-  <h1>{$city.name}</h1>
+<h1>{$selectedCity.name}</h1>
+<div class="card-bordered bg-primary text-3xl">
   <div class="card-body ">
     <div class="card-title text-gray-100">
-      Prayer Time on {$currentCitySchedule.date_str}
-      <br />({$currentCitySchedule.hijri_date.hd}
-      {HIJRI_MONTHS_LIST[+$currentCitySchedule.hijri_date.hm - 1]}
-      {$currentCitySchedule.hijri_date.hy})
+      Prayer Time on {$currentCityDailyPrayerTime.date_str}
+      <br />({$currentCityDailyPrayerTime.hijri_date.hd}
+      {HIJRI_MONTHS_LIST[+$currentCityDailyPrayerTime.hijri_date.hm - 1]}
+      {$currentCityDailyPrayerTime.hijri_date.hy})
     </div>
     <table class="table">
       <tbody>
@@ -33,35 +36,35 @@
                     </tr> -->
         <tr>
           <td>
-            {#if +$currentCitySchedule.hijri_date.hm == RAMADAN_MONTH_NO}
+            {#if +$currentCityDailyPrayerTime.hijri_date.hm == RAMADAN_MONTH_NO}
               Sehr ends
             {:else}
               Fajr
             {/if}
           </td>
-          <td>{$currentCitySchedule.fajr}</td>
+          <td>{$currentCityDailyPrayerTime.fajr}</td>
         </tr>
         <tr>
-          <td>Sunrise</td><td>{$currentCitySchedule.sunrise}</td>
+          <td>Sunrise</td><td>{$currentCityDailyPrayerTime.sunrise}</td>
         </tr>
         <tr>
-          <td>Zuhr</td><td>{$currentCitySchedule.dhuhr}</td>
+          <td>Zuhr</td><td>{$currentCityDailyPrayerTime.dhuhr}</td>
         </tr>
         <tr>
-          <td>Asar</td><td>{$currentCitySchedule.asr}</td>
+          <td>Asar</td><td>{$currentCityDailyPrayerTime.asr}</td>
         </tr>
         <tr>
           <td>
-            {#if +$currentCitySchedule.hijri_date.hm == RAMADAN_MONTH_NO}
+            {#if +$currentCityDailyPrayerTime.hijri_date.hm == RAMADAN_MONTH_NO}
               Iftar
             {:else}
               Maghrib
             {/if}
           </td>
-          <td>{$currentCitySchedule.maghrib}</td>
+          <td>{$currentCityDailyPrayerTime.maghrib}</td>
         </tr>
         <tr>
-          <td>Isha</td><td>{$currentCitySchedule.isha}</td>
+          <td>Isha</td><td>{$currentCityDailyPrayerTime.isha}</td>
         </tr>
       </tbody>
     </table>

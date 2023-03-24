@@ -1,4 +1,4 @@
-import { cities, city } from "../stores/store";
+import { cities, selectedCity } from "../stores/store";
 export const load = async () => {
   async function getAllCities() {
     const url =

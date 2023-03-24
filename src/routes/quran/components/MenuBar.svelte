@@ -1,10 +1,26 @@
-<script>
+<script lang="ts">
   import Fa from "svelte-fa";
   import {
     faArrowDown,
     faArrowDownShortWide,
   } from "@fortawesome/free-solid-svg-icons";
+
   import { QURAN_JUZ_LIST, QURAN_SURAH_LIST } from "../../../data/quran";
+
+  import type { TSurah } from "../../../data/quran";
+
+  const handleClick = (e: any) => {
+    console.log("Button clicked");
+    console.log(e);
+  };
+  //   selectedCity.set({
+  //     name: selectCity.name,
+  //     location: selectCity.location,
+  //   });
+
+  //   fetchCityPrayerTime($selectedCity);
+  //   fetchCityMonthCalendar($selectedCity);
+  // };
 </script>
 
 <div class="navbar bg-base-100">
@@ -18,7 +34,9 @@
         </button>
         <ul class="p-2 bg-base-100">
           {#each QURAN_SURAH_LIST as surah}
-            <li><a href={null}>{surah.no} - {surah.name}</a></li>
+            <li on:click={handleClick(surah)}>
+              <a href={null}>{surah.no} - {surah.name}</a>
+            </li>
           {/each}
         </ul>
       </li>
