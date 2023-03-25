@@ -1,7 +1,7 @@
 <script lang="ts">
   import NotificationBar from "../../components/NotificationBar/page.svelte";
   import { city } from "../../stores/store";
-  import { CITIES_LIST, type TCityData } from "../../data/constants";
+  import { CITIES_LIST, type TCityData } from "../../assets/data/constants";
   import Fa from "svelte-fa";
   import { faBell, faBellSlash } from "@fortawesome/free-solid-svg-icons";
 

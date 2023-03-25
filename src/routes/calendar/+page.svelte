@@ -8,6 +8,6 @@
 
 <hr />
 
-<div class="container justify-items-center m-10">
+<div class="container justify-items-center">
   <Calendar data={prayerCalendar} />
 </div>

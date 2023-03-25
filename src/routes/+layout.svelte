@@ -1,11 +1,10 @@
 <script lang="ts">
   import "../app.css";
   import NavBar from "../components/NavBar/page.svelte";
+  // import { goto } from "$app/navigation";
+
+  // goto("/home");
 </script>
 
-<!-- <div> -->
 <NavBar />
-<!-- <div class="container"> -->
 <slot />
-<!-- </div>
-</div> -->

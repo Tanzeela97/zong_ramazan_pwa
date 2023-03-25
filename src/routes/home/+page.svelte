@@ -4,6 +4,6 @@
   const { prayerTime } = data;
 </script>
 
-<div class="container justify-items-center m-10">
+<div class="container justify-items-center">
   <PrayerTime data={prayerTime} />
 </div>

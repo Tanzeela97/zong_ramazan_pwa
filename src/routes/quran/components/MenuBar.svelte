@@ -5,9 +5,9 @@
     faArrowDownShortWide,
   } from "@fortawesome/free-solid-svg-icons";
 
-  import { QURAN_JUZ_LIST, QURAN_SURAH_LIST } from "../../../data/quran";
+  import { QURAN_JUZ_LIST, QURAN_SURAH_LIST } from "../../../assets/data/quran";
 
-  import type { TSurah } from "../../../data/quran";
+  import type { TSurah } from "../../../assets/data/quran";
 
   const handleClick = (e: any) => {
     console.log("Button clicked");

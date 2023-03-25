@@ -1,14 +1,18 @@
 <script lang="ts">
   import AyatCard from "./components/AyatCard.svelte";
   import MenuBar from "./components/MenuBar.svelte";
+  import { blur } from "svelte/transition";
+  // import { quintOut } from "svelte/easing";
+
   export let data;
   const { ayats } = data;
 </script>
 
-<div class="container">
+<div
+  class="container justify-items-center"
+  transition:blur={{ delay: 300, amount: 30 }}
+>
   <MenuBar />
-</div>
-<div class="container justify-items-center mx-10 my-2">
   <ul>
     {#each ayats as ayat}
       <li class="p-2">

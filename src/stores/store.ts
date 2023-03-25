@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import { CITIES_LIST } from "../data/constants";
+import { CITIES_LIST } from "../assets/data/constants";
 
 export const geoLocation = writable([24.7, 67.0]);
 export const selectedCity = writable(CITIES_LIST[2]);
