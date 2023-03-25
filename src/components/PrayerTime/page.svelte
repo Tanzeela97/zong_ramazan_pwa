@@ -4,17 +4,17 @@
     RAMADAN_MONTH_NO,
     HIJRI_MONTHS_LIST,
   } from "../../assets/data/constants";
-  export let data: any;
+  // export let data: any;
 
   import { selectedCity, currentCityDailyPrayerTime } from "../../stores/store";
 
-  $currentCityDailyPrayerTime = data;
+  // $currentCityDailyPrayerTime = data;
   // console.log("------------current city", $selectedCity);
 
-  console.log(
-    "----------currentCityDailyPrayerTime",
-    $currentCityDailyPrayerTime
-  );
+  // console.log(
+  //   "----------currentCityDailyPrayerTime",
+  //   $currentCityDailyPrayerTime
+  // );
   // console.log("------------cityPrayerSchedule", cityPrayerSchedule);
   // city.subscribe((data) => {
   //   cityPrayerSchedule = data;

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import PrayerTime from "../components/PrayerTime/page.svelte";
 </script>
 
-<h1>Ramadhan Mubarak!</h1>
+<PrayerTime />

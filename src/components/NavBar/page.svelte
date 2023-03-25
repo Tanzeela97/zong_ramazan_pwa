@@ -1,14 +1,14 @@
 <script lang="ts">
-  import Fa from "svelte-fa";
-  import {
-    faBell,
-    faBellSlash,
-    faHome,
-    faArrowDown,
-  } from "@fortawesome/free-solid-svg-icons";
+  // import Fa from "svelte-fa";
+  // import {
+  //   faBell,
+  //   faBellSlash,
+  //   faHome,
+  //   faArrowDown,
+  // } from "@fortawesome/free-solid-svg-icons";
 
-  import { notification, selectedCity, cities } from "../../stores/store";
-  import { CITIES_LIST } from "../../assets/data/constants";
+  import { notification, selectedCity, citiesList } from "../../stores/store";
+  // import { CITIES_LIST } from "../../assets/data/constants";
 
   import {
     fetchCityMonthCalendar,
@@ -53,7 +53,7 @@
       tabindex="0"
       class="dropdown-content menu  p-2 shadow bg-base-100 rounded-box w-52"
     >
-      {#each $cities as cityItem}
+      {#each $citiesList as cityItem}
         <li on:click={handleClick(cityItem)}>
           <a href={null}>{cityItem.name}</a>
         </li>
@@ -140,7 +140,7 @@
             </a>
           </btn>
           <ul class="p-2 bg-base-100">
-            {#each $cities as cityItem}
+            {#each $citiesList as cityItem}
               <li on:click={handleClick(cityItem)}>
                 <a href={null}>{cityItem.name}</a>
               </li>
@@ -202,7 +202,7 @@
         </button>
 
         <ul class="p-2 bg-base-100">
-          {#each $cities as cityItem}
+          {#each $citiesList as cityItem}
             <li on:click={handleClick(cityItem)}>
               <a href={null}>{cityItem.name}</a>
             </li>

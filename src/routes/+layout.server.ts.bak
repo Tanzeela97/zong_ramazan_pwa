@@ -1,0 +1,16 @@
+// import { citiesList, isLoading } from "../stores/store";
+// export const load = async ({ fetch }: { fetch: any }) => {
+//   async function getAllCities() {
+//     isLoading.set(true);
+//     const url =
+//       "https://zongislamicv1.vectracom.com/api/index.php?msisdn=null&operator=Zong&menu=getAllCity";
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     citiesList.set(data.data);
+//     isLoading.set(false);
+//     return data.data;
+//   }
+//   return {
+//     cities: getAllCities(),
+//   };
+// };
