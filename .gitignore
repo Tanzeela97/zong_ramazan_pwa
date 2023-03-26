@@ -12,3 +12,5 @@ vite.config.ts.timestamp-*
 *svelte_x
 *.ts_x
 
+bak/
+

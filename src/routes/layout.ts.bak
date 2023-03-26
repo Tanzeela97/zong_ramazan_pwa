@@ -1,0 +1,40 @@
+// import { get } from "svelte/store";
+import type { TCityData } from "../assets/data/constants";
+import {
+  selectedCity,
+  citiesList,
+  currentCityDailyPrayerTime,
+  isLoading,
+} from "../stores/store";
+export const load = async ({ fetch }: { fetch: any }) => {
+  async function getAllCities() {
+    isLoading.set(true);
+    const url =
+      "https://zongislamicv1.vectracom.com/api/index.php?msisdn=null&operator=Zong&menu=getAllCity";
+    // try {
+    const response = await fetch(url);
+
+    const data = await response.json();
+    // if (response.ok) {
+    citiesList.set(data.data);
+    selectedCity.set(data.data[2]);
+
+    isLoading.set(false);
+    // invalidateAll();
+    // console.log("-----------------", data.data);
+    // }
+    // } catch {
+    //   console.log(error.name);
+    //   //   throw error(
+    //   //     400,
+    //   //     "Could not connect to the internet. Please check your connection"
+    //   //   );
+    // }
+    return data.data;
+  }
+
+  return {
+    // prayerTime: fetchPrayerTime(),
+    cities: getAllCities(),
+  };
+};
