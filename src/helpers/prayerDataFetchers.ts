@@ -2,7 +2,7 @@ import type { TCityData } from "../assets/data/constants";
 import {
   currentCityMonthSchedule,
   currentCityDailyPrayerTime,
-} from "../stores/store";
+} from "../stores/prayerTime";
 
 export const fetchCityPrayerTime = async (city: TCityData) => {
   const url = `https://ap-1.ixon.cc/api/v3/prayertime/pt?lt=${city.location.coordinates[0]}&lg=${city.location.coordinates[1]}&m=${city.name}&a=HANAFI&tz=5&f=12h`;

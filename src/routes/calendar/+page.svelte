@@ -2,6 +2,6 @@
   import Calendar from "../../components/calendar/page.svelte";
 </script>
 
-<div class="w-full">
+<div class=" card w-full">
   <Calendar />
 </div>

@@ -1,3 +1,8 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+@import url("https://vp.vxt.net/cdn/fonts/ur/Jameel_Noori_Nastaleeq.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+@import url("https://vp.vxt.net/cdn/fonts/ar/quranic/PDMS_Saleem_QuranFont-signed.css");
+/* @import url("https://vp.vxt.net/cdn/fonts/ur/Mehr_Nastaliq_Web_version_1.0_beta.css"); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

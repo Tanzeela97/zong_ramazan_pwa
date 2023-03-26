@@ -21,27 +21,35 @@
   import SubscribeButton from "../components/subscribeButton/page.svelte";
 </script>
 
-<div class="bg-gradient-to-b">
-  <div class="m-0 p-0">
-    <!-- <div class="parallax"> -->
+<div>
+  <div
+    class="card-title text-secondary mb-5 flex flex-col  gradient-light-to-pink"
+  >
+    <h1 class="flex-1">Assalam Alaikum</h1>
+    <h2 class="flex-2">and Ramadan Kareem!</h2>
+  </div>
+  <div>
     <HomeFirstCard />
-    <!-- </div> -->
 
     <div class="flex-row">
-      <div class="absolute mt-8 inset-x-9 inset-y-40 justify-center py-6">
+      <div class="absolute mt-8 inset-x-8 inset-y-80">
         <!-- <div class="absolute mt-8 inset-x-0 bottom-100 h-16"> -->
         <div>
           <PrayerTime />
         </div>
-        <div class="divider" />
-        <div>
+        <br />
+        <!-- <div class="divider color-white" /> -->
+        <div class="card">
           <SubscribeButton />
         </div>
-        <div class="divider" />
+        <br />
+        <!-- <div class="divider color-white" /> -->
+        <!-- <div class="divider" /> -->
         <div class="card grad-pink-to-light">
           <ContentCard props={sampleAyat} />
         </div>
-        <div class="divider" />
+        <br />
+        <!-- <div class="divider" /> -->
 
         <div class="card grad-light-to-pink">
           <ContentCard props={sampleHadith} />

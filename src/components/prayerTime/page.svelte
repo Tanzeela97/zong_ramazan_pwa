@@ -6,17 +6,19 @@
   } from "../../assets/data/constants";
   // export let data: any;
 
-  import { selectedCity, currentCityDailyPrayerTime } from "../../stores/store";
+  import { selectedCity } from "../../stores/store";
+  import { currentCityDailyPrayerTime } from "../../stores/prayerTime";
 </script>
 
 {#if $selectedCity != undefined}
   <div
-    class="card w-80 glass p-1"
+    class="card w-50 p-1 bg-white"
     in:fly={{ delay: 200, duration: 800, y: 100 }}
   >
     <div class="card-body">
       <!-- <table class="bg-white bg-opacity-30 rounded-md w-full text-primary"> -->
-      <table class="table w-full text-primary">
+      <h2 class="ml-2 card-title text-secondary">Prayer Timings</h2>
+      <table class="table table-compact w-full text-primary">
         <tbody>
           <!-- <tr>
               <td>Imsak</td><td>{data.imsak}</td>

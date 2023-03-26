@@ -22,7 +22,7 @@
 </div>
 
 <style>
-  .card-backdrop {
+  /* .card-backdrop {
     background-image: url("src/assets/svg/quran_1.svg");
-  }
+  } */
 </style>

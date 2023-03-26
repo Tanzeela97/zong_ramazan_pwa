@@ -1,14 +1,12 @@
 <script lang="ts">
   import { fade, slide } from "svelte/transition";
-  import { currentCityMonthSchedule, isRamadan } from "../../stores/store";
+  import { currentCityMonthSchedule } from "../../stores/prayerTime";
   import {
     RAMADAN_MONTH_NO,
     HIJRI_MONTHS_LIST,
   } from "../../assets/data/constants";
 
-  $: isRamadan;
-
-  let i = 2;
+  let i = 5;
 </script>
 
 <!-- <label>
@@ -28,14 +26,15 @@
   {/each}
 {/if} -->
 
-<label>
+<label class="flex place-content-end mb-3">
   <!-- <input type="range" bind:value={i} max="30" /> -->
+  <h2 class="flex-2 text-primary mr-4">show more days</h2>
   <input
     type="range"
     bind:value={i}
     min="2"
     max="30"
-    class="range range-primary w-20"
+    class="flex- 1 range range-primary w-20"
   />
 </label>
 <div
@@ -86,36 +85,36 @@
   </table>
 </div>
 <!-- <table class="table table-compact text-center">
-    <thead>
-      <th>Date</th>
-      <th
-        >{#if +$currentCityMonthSchedule[0].hijri_date.hm == RAMADAN_MONTH_NO}Sehr<br
-          />End{:else}Fajr{/if}</th
-      >
-      <th>Sunrise</th>
-      <th>Zuhr</th>
-      <th>Asar</th>
-      <th
-        >{#if +$currentCityMonthSchedule[0].hijri_date.hm == RAMADAN_MONTH_NO}Iftar{:else}Maghrib{/if}</th
-      >
+  <thead>
+    <th>Date</th>
+    <th
+    >{#if +$currentCityMonthSchedule[0].hijri_date.hm == RAMADAN_MONTH_NO}Sehr<br
+    />End{:else}Fajr{/if}</th
+    >
+    <th>Sunrise</th>
+    <th>Zuhr</th>
+    <th>Asar</th>
+    <th
+    >{#if +$currentCityMonthSchedule[0].hijri_date.hm == RAMADAN_MONTH_NO}Iftar{:else}Maghrib{/if}</th
+    >
       <th>Isha</th>
       <th>Hijri</th>
     </thead>
     <tbody>
       {#each $currentCityMonthSchedule as item}
-        <tr>
-          <td>{item.date_str}</td>
-          <td>{item.fajr}</td>
-          <td>{item.sunrise}</td>
-          <td>{item.dhuhr}</td>
-          <td>{item.asr}</td>
-          <td>{item.maghrib}</td>
-          <td>{item.isha}</td>
-          <td
-            >{item.hijri_date.hd}
-            {HIJRI_MONTHS_LIST[+item.hijri_date.hm - 1]}</td
-          >
-        </tr>
+      <tr>
+        <td>{item.date_str}</td>
+        <td>{item.fajr}</td>
+        <td>{item.sunrise}</td>
+        <td>{item.dhuhr}</td>
+        <td>{item.asr}</td>
+        <td>{item.maghrib}</td>
+        <td>{item.isha}</td>
+        <td
+        >{item.hijri_date.hd}
+        {HIJRI_MONTHS_LIST[+item.hijri_date.hm - 1]}</td
+        >
+      </tr>
       {/each}
     </tbody>
   </table> -->

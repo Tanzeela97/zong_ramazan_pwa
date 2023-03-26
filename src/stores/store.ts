@@ -1,32 +1,35 @@
 import { writable } from "svelte/store";
 import { CITIES_LIST } from "../assets/data/constants";
+import { toLocalStorage, fromLocalStorage } from "./storage";
 
-export type TQuranStatus = {
-  surah: number;
-  ayat: number;
-};
+export const isHanafiInitialValue = fromLocalStorage("isHanafi", true);
+export const isHanafi = writable(isHanafiInitialValue);
+toLocalStorage(isHanafi, "isHanafi");
 
-export type TAyat = {
-  surah: number;
-  ayat: number;
-  qtext: string;
-  lang: string;
-};
-export type TSurah = TAyat[];
+export const currentCityInitialValue = fromLocalStorage(
+  "currentCity",
+  CITIES_LIST[2]
+);
+export const selectedCity = writable(currentCityInitialValue);
+toLocalStorage(selectedCity, "currentCity");
 
-export const geoLocation = writable([24.7, 67.0]);
-export const selectedCity = writable(CITIES_LIST[2]);
-export const citiesList = writable(CITIES_LIST);
-// export const selectedCity = writable();
-// export const citiesList = writable();
+export const citiesListInitialValue = fromLocalStorage(
+  "citiesList",
+  CITIES_LIST
+);
+export const citiesList = writable(citiesListInitialValue);
+toLocalStorage(citiesList, "citiesList");
 
-export const notification = writable(false);
-export const isRamadan = writable(false);
-export const currentCityDailyPrayerTime = writable();
-export const currentCityMonthSchedule = writable();
+export const notificationInitialValue = fromLocalStorage("notification", false);
+export const notification = writable(notificationInitialValue);
+toLocalStorage(notification, "notification");
+
 export const isLoading = writable(false);
 
-export const currentAyat = writable({ surah: 1, ayat: 1 });
-export const currentSurah = writable();
-export const currentJuz = writable();
-export const currentLangs = writable(["ar", "ur", "en"]);
+// export const currentCity = writable(CITIES_LIST[2]);
+// export const geoLocation = writable([24.7, 67.0]);
+// export const citiesList = writable(CITIES_LIST);
+// export const prayerTime = writable({});
+// export const notification = writable(false);
+// citiesList.subscribe((val) => { browser && localStorage.setItem("citiesList", JSON.stringify(val)); });
+// currentCity.subscribe((val) => { browser && localStorage.setItem("currentCity", JSON.stringify(val)); });
