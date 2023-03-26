@@ -4,7 +4,13 @@
   import BottomNavBar from "../components/bottomNavBar/page.svelte";
 </script>
 
+<!-- <div class="overscroll-y-none"> -->
 <TopNavBar />
 
 <slot />
+<!-- </div> -->
 <BottomNavBar />
+
+<!-- <style>
+  .page-container
+</style> -->

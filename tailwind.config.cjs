@@ -10,10 +10,6 @@ module.exports = {
         quran: ["PDMS_Saleem_QuranFont-signed", "serif"],
         // 'mehr': ['Mehr_Nastaliq_Web_version_1.0_beta', 'serif'],
       },
-      backgroundImage: {
-        "masjid-iamge":
-          "url('src/assets/img/isra-miraj-illustration-paper-style-with-moon/4965307.jpg')",
-      },
     },
   },
   daisyui: {

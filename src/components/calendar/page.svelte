@@ -28,7 +28,7 @@
 
 <label class="flex place-content-end mb-3">
   <!-- <input type="range" bind:value={i} max="30" /> -->
-  <h2 class="flex-2 text-primary mr-4">show more days</h2>
+  <h2 class="flex-2 text-gray-400 mr-4">show more days -></h2>
   <input
     type="range"
     bind:value={i}

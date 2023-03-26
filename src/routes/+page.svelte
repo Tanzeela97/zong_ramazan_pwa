@@ -21,7 +21,7 @@
   import SubscribeButton from "../components/subscribeButton/page.svelte";
 </script>
 
-<div>
+<div class="container overscroll-y-none">
   <div
     class="card-title text-secondary mb-5 flex flex-col  gradient-light-to-pink"
   >
@@ -60,21 +60,20 @@
 </div>
 
 <style>
-  .parallax {
-    /* The image used */
-    background-image: url("../assets/img/isra-miraj-illustration-paper-style-with-moon/4965307.jpg")
-      no-repeat top center;
+  /* .parallax { */
+  /* The image used */
+  /* background-image: url("/img/isra-miraj-illustration-paper-style-with-moon/4965307.jpg")
+      no-repeat top center; */
 
-    /* background-image: url("../assets/img/isra-miraj-illustration-paper-style-with-moon/4965307.jpg"); */
-    overflow: hidden;
+  /* background-image: url("../assets/img/isra-miraj-illustration-paper-style-with-moon/4965307.jpg"); */
+  /* overflow: hidden; */
 
-    /* Set a specific height */
-    min-height: 100%;
+  /* Set a specific height */
+  /* min-height: 100%; */
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+  /* Create the parallax scrolling effect */
+  /* background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-  }
+    background-size: cover; */
 </style>
