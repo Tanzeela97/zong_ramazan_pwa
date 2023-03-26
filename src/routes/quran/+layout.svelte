@@ -4,14 +4,16 @@
     faArrowDown19,
     faArrowDownShortWide,
   } from "@fortawesome/free-solid-svg-icons";
-  import { QURAN_JUZ_LIST, QURAN_SURAH_LIST } from "../../assets/data/quran";
-  import type { TQuranStatus } from "../../stores/quran";
-  import { currentJuz, currentAyat } from "../../stores/quran";
+  import { QURAN_SURAH_LIST, type TSurah } from "../../assets/data/quran";
+  // import type { TQuranStatus } from "../../stores/quran";
+  import { currentAyat, currentSurah } from "../../stores/quran";
   import { invalidate, invalidateAll } from "$app/navigation";
 
-  async function handleSurahClick(surah: number) {
+  async function handleSurahClick(surah: TSurah) {
     // console.log("Surah selected:", surah);
-    currentAyat.set({ surah: surah, ayat: 1 });
+    currentAyat.set({ surah: surah.no, ayat: 1 });
+    currentSurah.set(surah);
+    invalidate("/quran");
     invalidateAll();
   }
 
@@ -40,7 +42,7 @@
         >
           {#each QURAN_SURAH_LIST as surah}
             <li class="bg-base-100 text-justify">
-              <a on:click={() => handleSurahClick(surah.no)} href={null}
+              <a on:click={() => handleSurahClick(surah)} href={null}
                 >{surah.no} - {surah.name}</a
               >
             </li>

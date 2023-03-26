@@ -1,14 +1,18 @@
 import { get } from "svelte/store";
-import type { TQuranStatus } from "../../stores/quran";
-import { currentAyat, currentLangs } from "../../stores/quran";
+import { currentSurah, type TQuranStatus } from "../../stores/quran";
+import { currentAyat, currentLangs, fullSurah } from "../../stores/quran";
 
 export const load = async ({ fetch }: { fetch: any }) => {
   async function fetchData() {
     const { surah, ayat } = get(currentAyat);
+    const surahObj = get(currentSurah);
+    // console.log("--------------currentAyat", currentAyat);
+    // console.log("--------------surahNo", surah);
+    // console.log("--------------surahObj", surahObj);
     // const surahNo = get(currentAyat);
     // const startAyat = get(currentAyat);
     const langs = get(currentLangs).join(",");
-    const limit = 5;
+    const limit = surahObj.ayats - 1;
     const url = `https://ap-1.ixon.cc/api/v3/quran?surah=${surah}&ayat=${ayat}&limit=${limit}&lang=${langs}`;
     // console.log(url);
     const response = await fetch(url);
@@ -22,6 +26,8 @@ export const load = async ({ fetch }: { fetch: any }) => {
       const groupedAyat = ayats.filter((j: any) => j.ayat == i);
       outArray.push(groupedAyat);
     }
+
+    fullSurah.set(outArray);
     // console.log(outArray);
     return outArray;
   }

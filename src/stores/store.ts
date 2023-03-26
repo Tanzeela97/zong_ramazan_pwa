@@ -2,6 +2,10 @@ import { writable } from "svelte/store";
 import { CITIES_LIST } from "../assets/data/constants";
 import { toLocalStorage, fromLocalStorage } from "./storage";
 
+export const phoneNumberInitialValue = fromLocalStorage("phoneNumber", null);
+export const phoneNumber = writable(phoneNumberInitialValue);
+toLocalStorage(phoneNumber, "phoneNumber");
+
 export const isHanafiInitialValue = fromLocalStorage("isHanafi", true);
 export const isHanafi = writable(isHanafiInitialValue);
 toLocalStorage(isHanafi, "isHanafi");

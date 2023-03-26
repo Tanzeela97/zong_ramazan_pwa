@@ -15,13 +15,31 @@
     reference: "reference goes here",
   };
 
+  // import { DAILY_AYAT } from "../assets/daily_content/daily-content";
+
+  // console.log(DAILY_AYAT[0]);
+  // let currentDate = new Date();
+  // now.get;
+
+  // let day = "" + currentDate.getDate();
+  // let month = Number(currentDate.getMonth()) + 1;
+  // let year = currentDate.getFullYear();
+
+  // console.log(day);
+  // console.log(month);
+  // console.log(year);
+  // let dateString = [year, month, day].join("-");
+  // console.log("---------", dateString);
+
   import PrayerTime from "../components/prayerTime/page.svelte";
   import ContentCard from "../components/contentCard/page.svelte";
   import HomeFirstCard from "../components/homeBackCard/page.svelte";
   import SubscribeButton from "../components/subscribeButton/page.svelte";
+  // import { now } from "svelte/internal";
 </script>
 
 <div class="container overscroll-y-none">
+  <!-- <h1>{currentDate}</h1> -->
   <div
     class="card-title text-secondary mb-5 flex flex-col  gradient-light-to-pink"
   >
@@ -39,21 +57,21 @@
         </div>
         <br />
         <!-- <div class="divider color-white" /> -->
-        <div class="card">
+        <!-- <div class="card">
           <SubscribeButton />
-        </div>
+        </div> -->
         <br />
         <!-- <div class="divider color-white" /> -->
         <!-- <div class="divider" /> -->
-        <div class="card grad-pink-to-light">
+        <!-- <div class="card grad-pink-to-light">
           <ContentCard props={sampleAyat} />
-        </div>
+        </div> -->
         <br />
         <!-- <div class="divider" /> -->
 
-        <div class="card grad-light-to-pink">
+        <!-- <div class="card grad-light-to-pink">
           <ContentCard props={sampleHadith} />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
