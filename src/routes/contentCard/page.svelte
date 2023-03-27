@@ -2,6 +2,8 @@
   import type { PageData } from "../../routes/$types";
 
   export let props: any;
+
+  console.log("-----------props", props);
 </script>
 
 <div class="card w-80">

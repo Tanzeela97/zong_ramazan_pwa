@@ -1,5 +1,7 @@
 import { writable } from "svelte/store";
 import { CITIES_LIST } from "../assets/data/constants";
+import { AYATLIST } from "../assets/daily_content/romanAyat";
+import { HADITHLIST } from "../assets/daily_content/romanHadith";
 import { toLocalStorage, fromLocalStorage } from "./storage";
 
 export const phoneNumberInitialValue = fromLocalStorage("phoneNumber", null);
@@ -29,6 +31,9 @@ export const notification = writable(notificationInitialValue);
 toLocalStorage(notification, "notification");
 
 export const isLoading = writable(false);
+
+export const ayatList = writable(AYATLIST);
+export const hadithList = writable(HADITHLIST);
 
 // export const currentCity = writable(CITIES_LIST[2]);
 // export const geoLocation = writable([24.7, 67.0]);

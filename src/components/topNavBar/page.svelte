@@ -32,7 +32,7 @@
   };
 </script>
 
-<nav class="navbar bg-secondary w-100 mb-5">
+<nav class="navbar bg-secondary w-100 mb-2">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl" href="/">Zong Islamic</a>
   </div>
