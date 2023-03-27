@@ -4,7 +4,7 @@
   export let props: PageData;
 </script>
 
-<div class="card w-80">
+<div class="card w-full">
   <div class="card-body">
     <h2 class="card-title">Ayat of the Day</h2>
 

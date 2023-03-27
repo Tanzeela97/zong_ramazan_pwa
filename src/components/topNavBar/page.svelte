@@ -38,7 +38,7 @@
   </div>
   <div class="navbar-end">
     {#if $selectedCity != undefined}
-      <div class="dropdown dropdown-end ">
+      <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn m-1 btn-primary">
           {$selectedCity.name}
           <svg
@@ -52,16 +52,19 @@
             /></svg
           >
         </label>
-        <ul
-          tabindex="0"
-          class="dropdown-content menu  p-2 shadow bg-base-100 rounded-box w-52"
-        >
-          {#each $citiesList as cityItem}
-            <li on:click={handleClick(cityItem)}>
-              <a href={null}>{cityItem.name}</a>
-            </li>
-          {/each}
-        </ul>
+        <div class="z-10 ">
+          <ul
+            class="w-60 h-60 overflow-y-scroll dropdown-content px-4 py-2  shadow bg-base-100 rounded-box"
+          >
+            {#each $citiesList as cityItem}
+              <div class="w-full py-2 text-sm font-medium flex items-center">
+                <li on:click={handleClick(cityItem)}>
+                  <a href={null}>{cityItem.name}</a>
+                </li>
+              </div>
+            {/each}
+          </ul>
+        </div>
       </div>
     {/if}
     <div class="dropdown dropdown-end">

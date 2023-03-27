@@ -37,15 +37,16 @@
           </span></label
         >
         <ul
-          tabindex="0"
-          class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+          class="w-50 h-60 overflow-y-scroll p-2 dropdown-content shadow bg-base-100 rounded-box mt-4"
         >
           {#each QURAN_SURAH_LIST as surah}
-            <li class="bg-base-100 text-justify">
-              <a on:click={() => handleSurahClick(surah)} href={null}
-                >{surah.no} - {surah.name}</a
-              >
-            </li>
+            <div class="w-full py-2  text-sm font-medium flex items-center">
+              <li class="bg-base-100 text-justify">
+                <a on:click={() => handleSurahClick(surah)} href={null}
+                  >{surah.no} - {surah.name}</a
+                >
+              </li>
+            </div>
           {/each}
         </ul>
       </div>
