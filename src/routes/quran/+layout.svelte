@@ -37,7 +37,7 @@
           </span></label
         >
         <ul
-          class="w-50 h-60 overflow-y-scroll p-2 dropdown-content shadow bg-base-100 rounded-box mt-4"
+          class="w-60 h-60 overflow-y-scroll p-2 dropdown-content shadow bg-base-100 rounded-box mt-4"
         >
           {#each QURAN_SURAH_LIST as surah}
             <div class="w-full py-2  text-sm font-medium flex items-center">
