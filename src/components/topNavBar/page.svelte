@@ -4,6 +4,7 @@
   // import { get } from "svelte/store";
   import type { TCityData } from "../../assets/data/constants";
   import { isHanafi, selectedCity, citiesList } from "../../stores/store";
+  import { currentCityDailyPrayerTime } from "../../stores/prayerTime";
   // import {
   //   fetchCityMonthCalendar,
   //   fetchCityPrayerTime,
@@ -13,6 +14,16 @@
     location: { coordinates: ["20.1", "20.5"] },
     name: "nothing important",
   };
+
+  const updateTime = async () => {
+    let day = new Date().getDate();
+    const dayInStorage = await $currentCityDailyPrayerTime["date"].d;
+
+    if (dayInStorage != day) {
+      invalidateAll();
+    }
+  };
+  updateTime();
 
   const handleClick = (selectCity: any) => {
     selectedCity.set({
@@ -54,6 +65,7 @@
         </label>
         <div class="z-10 ">
           <ul
+            tabindex="0"
             class="w-60 h-60 overflow-y-scroll dropdown-content px-4 py-2  shadow bg-base-100 rounded-box"
           >
             {#each $citiesList as cityItem}

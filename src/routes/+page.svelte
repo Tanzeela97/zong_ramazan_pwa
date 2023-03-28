@@ -8,6 +8,7 @@
   import AyatOfDayCard from "../components/ayatOfDayCard/page.svelte";
   import HadithOfDayCard from "../components/hadithOfDayCard/page.svelte";
   import HomeFirstCard from "../components/homeBackCard/page.svelte";
+
   // import SubscribeButton from "../components/subscribeButton/page.svelte";
 </script>
 

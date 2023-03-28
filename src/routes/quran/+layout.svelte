@@ -37,6 +37,7 @@
           </span></label
         >
         <ul
+          tabindex="0"
           class="w-60 h-60 overflow-y-scroll p-2 dropdown-content shadow bg-base-100 rounded-box mt-4"
         >
           {#each QURAN_SURAH_LIST as surah}
