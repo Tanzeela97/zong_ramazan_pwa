@@ -7,7 +7,6 @@ import {
   //   isLoading,
 } from "../stores/prayerTime";
 export const load = async ({ parent }) => {
-  console.log("prayer time function called");
   await parent();
   async function fetchPrayerTime() {
     let currentCity: TCityData = get(selectedCity);
