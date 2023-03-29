@@ -10,20 +10,23 @@
   //   fetchCityPrayerTime,
   // } from "../../helpers/prayerDataFetchers";
 
-  let city_name: TCityData = {
-    location: { coordinates: ["20.1", "20.5"] },
-    name: "nothing important",
-  };
+  // let city_name: TCityData = {
+  //   location: { coordinates: ["20.1", "20.5"] },
+  //   name: "nothing important",
+  // };
 
-  const updateTime = async () => {
-    let day = new Date().getDate();
-    const dayInStorage = await $currentCityDailyPrayerTime["date"].d;
+  // const updateTime = async () => {
+  //   let day = new Date().getDate();
+  //   day = 30;
+  //   console.log(new Date().getDate());
+  //   console.log($currentCityDailyPrayerTime["date"].d);
+  //   const dayInStorage = await $currentCityDailyPrayerTime["date"].d;
 
-    if (dayInStorage != day) {
-      invalidateAll();
-    }
-  };
-  updateTime();
+  //   if (dayInStorage != day) {
+  //     invalidate("/");
+  //   }
+  // };
+  // updateTime();
 
   const handleClick = (selectCity: any) => {
     selectedCity.set({
