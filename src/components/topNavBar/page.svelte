@@ -15,19 +15,6 @@
   //   name: "nothing important",
   // };
 
-  // const updateTime = async () => {
-  //   let day = new Date().getDate();
-  //   day = 30;
-  //   console.log(new Date().getDate());
-  //   console.log($currentCityDailyPrayerTime["date"].d);
-  //   const dayInStorage = await $currentCityDailyPrayerTime["date"].d;
-
-  //   if (dayInStorage != day) {
-  //     invalidate("/");
-  //   }
-  // };
-  // updateTime();
-
   const handleClick = (selectCity: any) => {
     selectedCity.set({
       name: selectCity.name,

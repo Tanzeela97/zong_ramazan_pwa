@@ -13,5 +13,6 @@ vite.config.ts.timestamp-*
 *.ts_x
 
 bak/
+archive/
 python-helpers/
 

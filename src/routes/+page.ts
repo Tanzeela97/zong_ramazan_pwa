@@ -6,6 +6,7 @@ import {
   currentCityDailyPrayerTime,
   //   isLoading,
 } from "../stores/prayerTime";
+
 export const load = async ({ parent }) => {
   await parent();
   async function fetchPrayerTime() {
