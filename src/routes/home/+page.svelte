@@ -58,8 +58,9 @@
             <SubscribeButton />
           </div> -->
         <br />
-        <div class="z-0 flex-auto pt-100 card shadow-lg ayat-card-bg ">
-          <AyatOfDayCard props={$ayatList[contentDayToGet]} />
+        <!-- <div class="z-0 flex-auto pt-100 card shadow-lg ayat-card-bg "> -->
+        <div class="z-0 flex-auto pt-100 card shadow-lg grad-light-to-pink ">
+          <AyatOfDayCard />
         </div>
         <br />
 
